@@ -1,0 +1,19 @@
+@import url(/fonts/font.css);
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --light: #DAFFD6;
+    --dark: #032500;
+}
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Helmet';
+}
+
+.glowingOrbs h1{
+    font-size:6em;
+    color: var(--light);
+}
