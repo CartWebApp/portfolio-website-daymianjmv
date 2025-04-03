@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,46 @@
     <title>Daymian JMV</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="glowingOrbs">
-    <h1>Hello User!</h1>
-</div>
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 18 -8" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 class="greetings">Hello User!</h1>
+        <div class="abt-me">
+            <br>
+            <div class="miniStuff">
+                <h1 class="miniIntro">A Mini Introduction</h1>
+                <p class="miniText">Hi, I'm Daymian J. Madrigal Vasquez, a passionate web developer with a knack for
+                    creating interactive and
+                    visually stunning web applications. I love exploring new technologies and pushing the boundaries of
+                    what's possible on the web.</p>
+                <p class="miniText">Please, do take a look around my website, you may find some cool little secrets.</p>
+            </div>
+        </div>
+    </div>
+    <script src="orbs.js"></script>
+    <script src="cursor.js"></script>
 </body>
+
 </html>

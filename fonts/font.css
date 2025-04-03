@@ -1,16 +1,16 @@
 @font-face {
     font-family: '1EDITION';
-    src: url('../fonts/1EDITION.TTF') format('truetype');
+    src: url('../fonts/1EDITION.TTF') format('ttf');
 }
 
 @font-face {
     font-family: 'Helmet';
-    src: url('../fonts/Helmet-lWZV.otf') format('opentype');
+    src: url('../fonts/Helmet-lWZV.otf') format('otf');
 }
 
 @font-face {
     font-family: 'Junegull';
-    src: url('../fonts/junegull.ttf') format('truetype');
+    src: url('../fonts/junegull.ttf') format('ttf');
 }
 
 @font-face {

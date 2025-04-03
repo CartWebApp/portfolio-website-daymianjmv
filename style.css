@@ -1,19 +1,291 @@
-@import url(/fonts/font.css);
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveVertical {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(0%) translateY(-5%);
+    }
+
+    50% {
+        transform: translateX(40%) translateY(5%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(-5%);
+    }
+}
 
 :root {
-    --black: #000000;
-    --white: #ffffff;
-    --light: #DAFFD6;
-    --dark: #032500;
+    --color-bg1: #032500;
+    --color-bg2: #000000;
+    --color1: 0, 0, 0;
+    --color2: 218, 255, 214;
+    --color3: 69, 191, 85;
+    --color4: 22, 128, 57;
+    --color5: 180, 180, 50;
+    --circle-size: 100%;
+    --blending: hard-light;
 }
 
-body{
-    background-color: var(--black);
-    color: var(--white);
-    font-family: 'Helmet';
+body {
+    margin: 0;
+    overflow-x: hidden; /* Allow vertical scrolling but prevent horizontal scrolling */
+    background: black;
+    cursor: none; /* Make the default cursor invisible */
 }
 
-.glowingOrbs h1{
-    font-size:6em;
-    color: var(--light);
+::selection {
+    background: rgba(255, 255, 255); /* Change the selection color */
+    color: #000000; /* Change the text color when selected */
+}
+
+.gradient-bg {
+    position: fixed; /* Keep the background fixed */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it stays behind other content */
+    margin-bottom: 100em;
+}
+
+.gradients-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: url(#goo);
+}
+
+.gradients-container div {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: transform 0.2s ease-out;
+}
+
+.g1 {
+
+    top: 13%;
+    left: 26%;
+}
+
+.g2 {
+
+    top: 65%;
+    left: 52%;
+}
+
+.g3 {
+
+    top: 39%;
+    left: 78%;
+}
+
+.g4 {
+
+    top: 2%;
+    left: 26%;
+}
+
+.g5 {
+
+    top: 26%;
+    left: 104%;
+}
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5 {
+    position: absolute;
+    mix-blend-mode: var(--blending);
+    opacity: 1;
+}
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5 {
+    width: var(--circle-size);
+    height: var(--circle-size);
+}
+
+.g1 {
+    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    animation: moveVertical 30s ease infinite;
+}
+
+.g2 {
+    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+}
+
+.g3 {
+    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+}
+
+.g4 {
+    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
+    opacity: 0.7;
+}
+
+.g5 {
+    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+    width: calc(var(--circle-size) * 1.5);
+    height: calc(var(--circle-size) * 1.5);
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
+}
+
+.gradients-container {
+    filter: url(#goo) blur(40px);
+    width: 100%;
+    height: 100%;
+}
+
+.gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+    top: 0;
+    left: 0;
+}
+
+/* Not orb related */
+
+/* Custom Circle Cursor */
+.cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
+    z-index: 9999;
+}
+
+.cursor-hover {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+
+.pointer-hover {
+    cursor: none;
+}
+
+
+.light-bg-hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Example light background */
+}
+
+/* Page */
+
+.content {
+    background-color: black;
+    margin-top: 100vh;
+    height: 100vh;
+    color: white;
+}
+
+.miniIntro {
+    font-size: 3rem;
+    color: rgb(218, 255, 214);
+    font-family: 'junegull';
+    margin-left:5%;
+    font-size: 150px;
+}
+
+.miniText{
+    margin-left:5%;
+    font-family: 'helmet';
+    font-size: larger;
+}
+
+.abt-me{
+    margin-top: 10em;
+}
+
+.miniStuff{
+    border: white solid 2px;
+    border-radius: 2em;
+}
+
+.greetings {
+    color: rgb(218, 255, 214);
+    font-family: 'helmet';
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;      
+    z-index: 100;
+}
+
+br{
+    margin: 3em;
 }
