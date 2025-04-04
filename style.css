@@ -56,7 +56,8 @@ body {
     margin: 0;
     overflow-x: hidden; /* Allow vertical scrolling but prevent horizontal scrolling */
     background: black;
-    cursor: none; /* Make the default cursor invisible */
+    cursor: none; 
+    font-family: 'helmet';
 }
 
 ::selection {
