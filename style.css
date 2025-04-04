@@ -40,6 +40,29 @@
     }
 }
 
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes delay {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 :root {
     --color-bg1: #032500;
     --color-bg2: #000000;
@@ -56,8 +79,7 @@ body {
     margin: 0;
     overflow-x: hidden; /* Allow vertical scrolling but prevent horizontal scrolling */
     background: black;
-    cursor: none; 
-    font-family: 'helmet';
+    cursor: none; /* Make the default cursor invisible */
 }
 
 ::selection {
@@ -263,7 +285,7 @@ body {
     font-size: larger;
 }
 
-.abt-me{
+.page{
     margin-top: 10em;
 }
 
@@ -287,6 +309,66 @@ body {
     z-index: 100;
 }
 
+.subgreetings{
+    color: rgb(218, 255, 214);
+    font-family: 'helmet';
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;      
+    z-index: 100;
+}
+
 br{
     margin: 3em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px #0003;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: var(--delay, 0s);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgb(0, 0, 0);
+    font-family: 'helmet';
+    font-size: 2rem;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color2), var(--color-bg1));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    cursor: none;
 }
