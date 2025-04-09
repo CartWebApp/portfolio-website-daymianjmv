@@ -1,3 +1,5 @@
+@import url(/fonts/stylesheet.css);
+
 @keyframes moveInCircle {
     0% {
         transform: rotate(0deg);
@@ -53,13 +55,42 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     50% {
         opacity: 0.5;
         transform: translateY(10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+        clip-path: inset(10% 0 20% 0);
+    }
+    40% {
+        transform: translate(2px, -2px);
+        clip-path: inset(30% 0 10% 0);
+    }
+    60% {
+        transform: translate(-1px, 1px);
+        clip-path: inset(5% 0 15% 0);
+    }
+    80% {
+        transform: translate(1px, -1px);
+        clip-path: inset(15% 0 5% 0);
+    }
+    100% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
     }
 }
 
@@ -77,25 +108,31 @@
 
 body {
     margin: 0;
-    overflow-x: hidden; /* Allow vertical scrolling but prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Allow vertical scrolling but prevent horizontal scrolling */
     background: black;
-    cursor: none; /* Make the default cursor invisible */
+    cursor: none;
+    /* Make the default cursor invisible */
 }
 
 ::selection {
-    background: rgba(255, 255, 255); /* Change the selection color */
-    color: #000000; /* Change the text color when selected */
+    background: rgba(255, 255, 255);
+    /* Change the selection color */
+    color: #000000;
+    /* Change the text color when selected */
 }
 
 .gradient-bg {
-    position: fixed; /* Keep the background fixed */
+    position: fixed;
+    /* Keep the background fixed */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     top: 0;
     left: 0;
-    z-index: -1; /* Ensure it stays behind other content */
+    z-index: -1;
+    /* Ensure it stays behind other content */
     margin-bottom: 100em;
 }
 
@@ -252,14 +289,14 @@ body {
     transform: translate(-50%, -50%) scale(1.5);
 }
 
-
 .pointer-hover {
     cursor: none;
 }
 
 
 .light-bg-hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Example light background */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Example light background */
 }
 
 /* Page */
@@ -275,21 +312,27 @@ body {
     font-size: 3rem;
     color: rgb(218, 255, 214);
     font-family: 'junegull';
-    margin-left:5%;
-    font-size: 150px;
+    margin-left: 5%;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.miniText{
-    margin-left:5%;
+.miniText {
+    margin-left: 5%;
     font-family: 'helmet';
     font-size: larger;
 }
 
-.page{
+.page {
     margin-top: 10em;
+    height: 200vh;
+    background-image: linear-gradient(to bottom, #000000, #666666);
 }
 
-.miniStuff{
+.miniStuff {
     border: white solid 2px;
     border-radius: 2em;
 }
@@ -305,11 +348,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: 0;      
+    margin: 0;
     z-index: 100;
+    width: 100%;
 }
 
-.subgreetings{
+.subgreetings {
     color: rgb(218, 255, 214);
     font-family: 'helmet';
     font-size: 5rem;
@@ -320,11 +364,11 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: 0;      
+    margin: 0;
     z-index: 100;
 }
 
-br{
+br {
     margin: 3em;
 }
 
@@ -333,6 +377,7 @@ br{
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
+    margin-top: 4em;
 }
 
 .button {
@@ -357,18 +402,137 @@ br{
     color: rgb(0, 0, 0);
     font-family: 'helmet';
     font-size: 2rem;
+    width: 30%;
 }
 
 .button:before {
     content: "";
     position: absolute;
+    margin: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--color2), var(--color-bg1));
+    background: linear-gradient(90deg, rgb(218, 255, 214), #032500);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
     cursor: none;
+}
+
+.button:hover:before {
+    transform: scaleX(1);
+}
+
+.SiteVersionCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.siteVersion {
+    border: white solid 5px;
+    border-radius: 1em;
+    margin-top: 5em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+.siteVersionText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    font-family: 'helmet';
+
+}
+
+.siteVersionHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(218, 255, 214);
+    h1{
+        font-size: 4em;
+    }
+}
+
+.djCrownOfThorns {
+    width: 150px;
+    height: 150px;
+    border-radius: 10em;
+    margin-right: 8em;
+}
+
+.version {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 1em;
+    font-family: 'windows';
+    position: relative;
+    animation: glitch 1s infinite;  
+    margin-right: 1em;
+}
+
+.footer {
+    border-top: white solid 2px;
+    background-color: #032500; /* Add a background color */
+    padding: 2rem; /* Add padding for spacing */
+    color: rgb(218, 255, 214); /* Match the color scheme */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'helmet';
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.footerRow {
+    flex: 1 1 20%; /* Ensure rows are responsive */
+    margin-bottom: 1rem; /* Add spacing between rows */
+}
+
+.footerRow h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footerRow p, .footerRow a {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgb(218, 255, 214); /* Ensure links match the footer color */
+    text-decoration: none;
+}
+
+.footerRow a:hover {
+    text-decoration: underline; /* Add hover effect for links */
+}
+
+.footerLinks {
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.portfolioLink{
+    color: white;
+}
+
+.footerRow a, .footerRow p{
+    color: white;
+
+}
+
+.footerRow h3{
+    font-family: 'junegull';
+}
+
+.socials{
+    border: white solid 4px;
+    border-radius: 1em;
 }
