@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cursor.style.borderColor = "rgba(0, 0, 0, 0.8)";
         });
         element.addEventListener("mouseleave", () => {
-            cursor.style.borderColor = "rgba(218, 255, 214, 0.8)";
+            cursor.style.borderColor = "rgba(255, 255, 255, 0.8)";
         });
     });
 });

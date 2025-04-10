@@ -115,6 +115,10 @@ body {
     /* Make the default cursor invisible */
 }
 
+a{
+    cursor: none;
+}
+
 ::selection {
     background: rgba(255, 255, 255);
     /* Change the selection color */
@@ -291,12 +295,6 @@ body {
 
 .pointer-hover {
     cursor: none;
-}
-
-
-.light-bg-hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Example light background */
 }
 
 /* Page */
@@ -478,6 +476,10 @@ br {
     margin-right: 1em;
 }
 
+.currentSite{
+    color:white;
+}
+
 .footer {
     border-top: white solid 2px;
     background-color: #032500; /* Add a background color */
@@ -493,8 +495,8 @@ br {
 }
 
 .footerRow {
-    flex: 1 1 20%; /* Ensure rows are responsive */
-    margin-bottom: 1rem; /* Add spacing between rows */
+    flex: 1 1 10%;
+    margin-bottom: 1rem;
 }
 
 .footerRow h3 {
@@ -532,7 +534,21 @@ br {
     font-family: 'junegull';
 }
 
-.socials{
+.socials {
     border: white solid 4px;
     border-radius: 1em;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+    gap: 1em; /* Add spacing between icons */
+    justify-items: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+    flex: 1 1 10%; /* Align with other footerRow elements */
+    margin-bottom: 1rem; /* Match spacing with other footerRow elements */
+}
+
+.social-icon{
+    width: 50px;
+    height: 50px;
+    margin: 0.5em;
+    transition: transform 0.3s ease;
 }

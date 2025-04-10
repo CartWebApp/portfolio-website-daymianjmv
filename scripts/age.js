@@ -1,5 +1,5 @@
-const birthYear = 2007; // Replace with your birth year
-const birthMonth = 11; // December (0-based index, so 11 = December)
+const birthYear = 2007;
+const birthMonth = 11;
 const birthDay = 26;
 
 function calculateAge() {
