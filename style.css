@@ -94,6 +94,17 @@
     }
 }
 
+@keyframes fallDown {
+    0% {
+        top: -20%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
 :root {
     --color-bg1: #032500;
     --color-bg2: #000000;
@@ -116,6 +127,10 @@ body {
 }
 
 a{
+    cursor: none;
+}
+
+button {
     cursor: none;
 }
 
@@ -293,9 +308,7 @@ a{
     transform: translate(-50%, -50%) scale(1.5);
 }
 
-.pointer-hover {
-    cursor: none;
-}
+
 
 /* Page */
 
@@ -326,7 +339,7 @@ a{
 
 .page {
     margin-top: 10em;
-    height: 200vh;
+    height: 141vh;
     background-image: linear-gradient(to bottom, #000000, #666666);
 }
 
@@ -343,12 +356,14 @@ a{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
     z-index: 100;
     width: 100%;
+    opacity: 0;
+    animation: fallDown 2s ease-out forwards;
 }
 
 .subgreetings {
@@ -465,6 +480,7 @@ br {
     margin-right: 8em;
 }
 
+
 .version {
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
@@ -481,8 +497,8 @@ br {
 }
 
 .footer {
+    margin-top: 15vh;
     border-top: white solid 2px;
-    background-color: #032500; /* Add a background color */
     padding: 2rem; /* Add padding for spacing */
     color: rgb(218, 255, 214); /* Match the color scheme */
     display: flex;
@@ -551,4 +567,127 @@ br {
     height: 50px;
     margin: 0.5em;
     transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.sidebar {
+    width: 0; /* Initially hide the sidebar */
+    height: 100%; /* Ensure it spans the viewport height */
+    background: url('imgs/topo.svg') repeat ;
+    background-size: auto 100%; /* Ensure the SVG spans the full height */
+    background-attachment: fixed; /* Make the background scroll with the page */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    max-width: 20vw; /* Ensure it doesn't exceed 20vh */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: 'helmet';
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.sidebar a, .sidebar .close-btn {
+    position: relative;
+    z-index: 2;
+    cursor: none;
+    
+}
+
+#closeSidebar{
+    cursor: none;
+}
+
+#coloseSidebar:hover{
+    color: #000000 !important;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 3em;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #000000;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Add smooth transition for color change */
+}
+
+.sidebar .close-btn:hover {
+    color: black; /* Change color to black on hover */
+}
+
+.here{
+    color: rgb(218, 255, 214) !important;
+}
+
+.here:hover{
+    color: rgb(0, 0, 0) !important;
+}
+
+span{
+    color: rgb(218, 255, 214);
+    font-size: 16px;
+    margin-top: 4px;
+;
+}
+
+.open-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ffffff;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+}
+
+.open-btn:hover {
+ cursor: none;
+}
+
+.pointer-hover {
+    cursor: none;
+}
+
+#body.hidden {
+    display: none; /* Hide the button */
+}
+
+#body {
+    transition: filter 0.5s ease; /* Smooth transition for blur effect */
+}
+
+#body.blurred {
+    filter: blur(5px); /* Apply blur effect */
 }

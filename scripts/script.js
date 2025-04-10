@@ -20,3 +20,4 @@
 
     console.log(message, style);
 })();
+

@@ -4,12 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website of Daymian JMV">
-    <title>Daymian JMV</title>
+    <meta name="description" content="daymian's portfolio site. A web developer with a passion for crafting interactive, visually engaging web experiences.">
+    <link rel="icon" type="image/png" href="/imgs/djCrownOfThorns.png">
+    <title>daymian // home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn pointer-hover">×</button>
+        <a href="/index.html" class="here sidebar-link pointer-hover">Home<br> <span>you're already here!</span></a>
+        <a href="/about/index.html" class="sidebar-link pointer-hover">About Me</a>
+        <a href="#projects" class="sidebar-link pointer-hover">Projects</a>
+        <a href="#contact" class="sidebar-link pointer-hover">Contact</a>
+    </div>
+    <button id="openSidebar" class="open-btn pointer-hover">☰</button>
+
     <div class="gradient-bg">
         <svg xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -31,11 +41,11 @@
             <div class="g5"></div>
         </div>
     </div>
-
     <div class="content">
         <h1 class="greetings light-bg-hover">Hello!</h1>
         <h3 class="subgreetings light-bg-hover">Im Daymian</h3>
         <br>
+        <div id="body">
         <div class="page">
             <div class="miniStuff">
                 <div class="miniIntro">
@@ -67,47 +77,50 @@
                             <h1 class="light-bg-hover">Site Updates</h1>
                             <p class="version">alpha</p>
                         </div>
-                        <p>Still in alpha, my current site is <a class="currentSite pointer-hover" href="https://www.daymian.xyz" target="_blank">here</a>
+                        <p>Still in alpha, my current site is <a class="currentSite pointer-hover"
+                                href="https://www.daymian.xyz" target="_blank">here</a>
                         </p>
                     </div>
                 </div>
             </div>
+            <div class="footer">
+                <div class="footerRow">
+                    <h3 class="light-bg-hover">Contact</h3>
+                    <p>Email: business@daymian.xyz</p>
+                </div>
+                <div class="footerRow">
+                    <h3 class="light-bg-hover">Portfolio</h3>
+                    <p class="portfolioLink"><a class="pointer-hover" href="#" target="_blank">Page</a></p>
+                    <p class="portfolioLink"><a class="pointer-hover" href="#" target="_blank">Page</a></p>
+                </div>
+                <div class="footerRow">
+                    <h3 class="light-bg-hover">About Me</h3>
+                    <p class="portfolioLink"><a class="pointer-hover" href="#" target="_blank">Page</a></p>
+                    <p class="portfolioLink"><a class="pointer-hover" href="#" target="_blank">Page</a></p>
+                </div>
+                <div class="footerRow socials">
+                    <a class="pointer-hover" href="https://www.daymian.xyz" target="_blank"><img class="social-icon"
+                            src="/imgs/icons/globe.svg"></a>
+                    <a class="pointer-hover" href="https://github.com/daymianjmv" target="_blank"><img class="social-icon"
+                            src="/imgs/icons/github.svg"></a>
+                    <a class="pointer-hover" href="https://github.com/d4ym1an" target="_blank"><img class="social-icon"
+                            src="/imgs/icons/github2.svg"></a>
+                    <a class="pointer-hover" href="https://www.upwork.com/freelancers/~01bce3362aa859dc2d" target="_blank"><img
+                            class="social-icon" src="/imgs/icons/upwork.svg"></a>
+                    <a class="pointer-hover" href="https://www.linkedin.com/in/daymian/" target="_blank"><img class="social-icon"
+                            src="/imgs/icons/linkedin.svg"></a>
+                </div>
+            </div>
         </div>
-        <div class="footer">
-            <div class="footerRow">
-                <h3 class="light-bg-hover">Contact</h3>
-                <p>Email: business@daymian.xyz</p>
-            </div>
-            <div class="footerRow">
-                <h3 class="light-bg-hover">Portfolio</h3>
-                <p class="portfolioLink"><a class="pointer-hover" href="#"
-                        target="_blank">Page</a></p>
-                <p class="portfolioLink"><a class="pointer-hover" href="#"
-                        target="_blank">Page</a></p>
-            </div>
-            <div class="footerRow">
-                <h3 class="light-bg-hover">About Me</h3>
-                <p class="portfolioLink"><a class="pointer-hover" href="#"
-                    target="_blank">Page</a></p>
-            <p class="portfolioLink"><a class="pointer-hover" href="#"
-                    target="_blank">Page</a></p>
-        </div>
-            </div>
 
-            <div class="footerRow socials">
-                <a class="pointer-hover" href="https://www.daymian.xyz"><img class="social-icon" src="/imgs/icons/globe.svg"></a>
-                <a class="pointer-hover" href="https://github.com/daymianjmv"><img class="social-icon" src="/imgs/icons/github.svg"></a>
-                <a class="pointer-hover" href="https://github.com/d4ym1an"><img class="social-icon" src="/imgs/icons/github2.svg"></a>
-                <a class="pointer-hover" href="https://www.upwork.com/freelancers/~01bce3362aa859dc2d"><img class="social-icon" src="/imgs/icons/upwork.svg"></a>
-                <a class="pointer-hover" href="www.linkedin.com/in/daymian/"><img class="social-icon" src="/imgs/icons/linkedin.svg"></a>
-            </div>
-        </div>
     </div>
+</div>
     <script src="/scripts/cursor.js"></script>
     <script src="/scripts/orbs.js"></script>
     <script src="/scripts/script.js"></script>
     <script src="/scripts/age.js"></script>
     <script src="/scripts/greetings.js"></script>
+    <script src="/scripts/sidebar.js"></script>
 </body>
 
 </html>
