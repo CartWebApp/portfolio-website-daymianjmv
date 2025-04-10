@@ -1,6 +1,6 @@
 const greetings = [
-    "Hello!", "Welcome!", "Hi there!", "Greetings!", "Howdy!", "Hey!", "Good to see you!", "Hiya!", "What's up?", "Salutations!", "Yo!", "Nice to meet you!", "Ahoy!", "Good day!", "WAZZZZ UPPP!",
-    "¡Hola!", "Bonjour!", "Hallo!", "Ciao!", "Olá!", "Nǐ hǎo!", "Konnichiwa!", "Annyeong!", "As-salāmu ʿalaykum!", "Namaste!", "Privet!", "Jambo!", "Merhaba!", "Nomoskar!"];  
+    "Hello!", "Welcome!", "Hi there!", "Greetings!", "Greetings Earthlings 👽", "Howdy!", "Hey!", "Good to see you!", "Hiya!", "What's up?", "Salutations!", "Yo!", "Nice to meet you!", "Ahoy!", "Good day!", "WAZZZZ UPPP!",
+    "¡Hola!", "Bonjour!", "Hallo!", "Ciao!", "Nǐ hǎo!", "Namaste!", "Jambo!"];  
 const greetingsElement = document.querySelector(".greetings");
 
 function typeGreeting(text, callback) {
