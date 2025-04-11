@@ -416,6 +416,7 @@ br {
     font-family: 'helmet';
     font-size: 2rem;
     width: 30%;
+    text-decoration: none;
 }
 
 .button:before {
@@ -435,6 +436,10 @@ br {
 
 .button:hover:before {
     transform: scaleX(1);
+}
+
+.button:hover{
+    text-decoration: underline;
 }
 
 .SiteVersionCenter{

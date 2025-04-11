@@ -1,6 +1,6 @@
 const greetings = [
     "Hello!", "Welcome!", "Hi there!", "Greetings!", "Greetings Earthlings 👽", "Howdy!", "Hey!", "Good to see you!", "Hiya!", "What's up?", "Salutations!", "Yo!", "Nice to meet you!", "Ahoy!", "Good day!", "WAZZZZ UPPP!",
-    "¡Hola!", "Bonjour!", "Hallo!", "Ciao!", "Nǐ hǎo!", "Namaste!", "Jambo!"];  
+    "¡Hola!"];  
 const greetingsElement = document.querySelector(".greetings");
 
 function typeGreeting(text, callback) {
@@ -11,7 +11,7 @@ function typeGreeting(text, callback) {
         i++;
         if (i === text.length) {
             clearInterval(interval);
-            setTimeout(() => callback(), 2000); // Pause before deleting
+            setTimeout(() => callback(), 2000);
         }
     }, 100);
 }
