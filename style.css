@@ -105,6 +105,15 @@
     }
 }
 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 :root {
     --color-bg1: #032500;
     --color-bg2: #000000;
@@ -305,9 +314,8 @@ button {
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.2);
-    transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1);
 }
-
 
 
 /* Page */
@@ -379,6 +387,13 @@ button {
     transform: translate(-50%, -50%);
     margin: 0;
     z-index: 100;
+}
+
+.subgreetings.two {
+    animation: bounce 1.5s infinite ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1em;
 }
 
 br {
@@ -695,4 +710,8 @@ span{
 
 #body.blurred {
     filter: blur(5px); /* Apply blur effect */
+}
+
+html {
+    scroll-behavior: smooth;
 }
