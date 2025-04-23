@@ -528,6 +528,7 @@ br {
     font-family: 'helmet';
     text-decoration: none;
     line-height: 1.5;
+    background-color: #666666;
 }
 
 .footerRow {
@@ -710,6 +711,16 @@ span{
 
 #body.blurred {
     filter: blur(5px); /* Apply blur effect */
+}
+
+/* Add blur effect when sidebar is open */
+.sidebar-open #body {
+    filter: blur(5px); /* Apply blur effect to the body */
+    pointer-events: none; /* Disable interactions with blurred content */
+}
+
+.sidebar-open .sidebar {
+    pointer-events: auto; /* Allow interactions with the sidebar */
 }
 
 html {
