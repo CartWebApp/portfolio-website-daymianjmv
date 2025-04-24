@@ -130,13 +130,15 @@
     cursor: none !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
-    background-image: linear-gradient(to bottom, #000000, #666666);
-    cursor: none !important;
+    background: linear-gradient(to bottom, #000000, #666666); /* Removed !important */
     color: white;
-
 }
 
 a{
@@ -151,7 +153,7 @@ button {
 .footer {
     border-top: white solid 2px;
     padding: 2rem;
-    color: rgb(218, 255, 214);
+    color: #daffd6;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -281,20 +283,6 @@ button {
 .sidebar .close-btn:hover {
     color: black;
 }
-/* site */
-.here {
-    color: rgb(218, 255, 214) !important;
-}
-
-.here:hover {
-    color: rgb(0, 0, 0) !important;
-}
-
-span {
-    color: rgb(218, 255, 214);
-    font-size: 16px;
-    margin-top: 4px;
-}
 
 .open-btn {
     font-size: 24px;
@@ -331,161 +319,132 @@ span {
     background-color: rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%) scale(1);
 }
-/* Page Style */
 
-.content{
-    cursor: none;
-}
+/* Page */
 
-.mainContent{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-}
-
-.profilePic{
-    width: 50vw;
-    height: 50vw;
-}
-
-.aboutMeText {
-    padding: 2rem;
-    margin-left: 1em;
-    font-family: 'Helmet', sans-serif;
-    line-height: 1.8;
-    color: rgb(255, 255, 255);
-}
-
-.aboutMeText h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: rgb(218, 255, 214);
-}
-
-.aboutMeText h3 {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    color: rgb(218, 255, 214);
-}
-
-.aboutMeText ul {
-    list-style-type: square;
-    padding-left: 1.5rem;
-}
-
-.aboutMeText ul li {
-    margin-bottom: 0.5rem;
-}
-
-.aboutMeText p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.hover-buttonsBackground{
-    background: linear-gradient(to bottom, #000000, #ffffff, #000000), url('/imgs/topo.svg');
+.header{
+    background: linear-gradient(to bottom, #000000, #008907, #008907,  #008907), url('/imgs/topo.svg');
+    animation: scrollBackground 15s linear infinite;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-blend-mode: overlay;
-    margin: 0;
-    animation: scrollBackground 30s linear infinite;
-    margin-top: 1em;
-}
-
-.hover-buttons {
+    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 50%;
-    position: relative;
-    left: 25%;
-}
-
-.button-container {
-    display: flex;
-    width: 100%;
-    max-width: 100vw;
-    position: relative;
-    border: 0px;
-    max-height: fit-content;
-    height: 50%;
-}
-
-.buttonOneSpacing{
-    display: flex;
-    background-color: white;
-    color: #000000;
-    width: 100%;
-    border: black solid 2px;
-    transition: transform 0.3s ease-in-out;
-    align-items: center;
-}
-
-.buttonTwoSpacing{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    color: #000000;
-    width: 100%;
-    border: black solid 0px;
-    transition: transform 0.3s ease-in-out;
-    border: #000000 solid 2px;
-}
-
-.b1, .b2, .b3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
     font-family: 'helmet';
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
 }
 
-.b2, .b3{
-    border: black solid 2px;
+.headerTwo{
+    background: linear-gradient(to bottom, #008907, #000000), url('/imgs/topo.svg');
+    animation: scrollBackground 15s linear infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'helmet';
 }
 
-
-.b2:hover, .b3:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 2px black solid;
-    background: white;
+.awardsMain, .achievementsMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'helmet';
+    border: #fff 3px solid;
+    border-radius: 1em;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2em;
+    margin-bottom:2em;
 }
 
-.buttonOneSpacing:hover, .b2:hover, .b3:hover {
-    transform: scale(1.5);
+.awardsMain h1, .achievementsMain h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgb(218, 255, 214);
 }
 
-.hover-button {
+.achievementsMain {
+    display: flex;
+    flex-direction: row; /* Ensure items are in a row */
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Ensure consistent width */
+    margin: 2em auto; /* Center horizontally */
+}
+
+.achievementsText {
     flex: 1;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    object-fit: cover;
-    width: 100%;
-    height: 200px;
+    margin-right: 20px;
+    padding-left: 20em;
 }
 
-#body.hidden {
-    display: none; /* Hide the button */
+.achievementsText h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: rgb(218, 255, 214);
 }
 
-#body {
-    transition: filter 0.5s ease; /* Smooth transition for blur effect */
+.achievementsText li{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-#body.blurred {
-    filter: blur(5px); /* Apply blur effect */
+.achievementsImgs {
+    flex: 1;
+    text-align: right;
 }
 
-html {
-    scroll-behavior: smooth;
+.achievementsImgs img{
+    width: 500px;
+    height: 500px;
+    margin-left: 20px;
+    padding: 1em;
 }
 
+/* a */
+.awardsMain {
+    display: flex;
+    flex-direction: row; /* Ensure items are in a row */
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Ensure consistent width */
+    margin: 2em auto; /* Center horizontally */
+}
+
+.awardsText {
+    flex: 1;
+    margin-right: 20px;
+    padding-left: 20em;
+}
+
+.awardsText h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: rgb(218, 255, 214);
+}
+
+.awardsText li{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.awardsImgs {
+    flex: 1;
+    text-align: right;
+}
+
+.awardsImgs img{
+    width: 500px;
+    height: 500px;
+    margin-left: 20px;
+    padding: 1em;
+}
