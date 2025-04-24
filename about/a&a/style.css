@@ -330,11 +330,12 @@ button {
     background-position: center;
     background-attachment: fixed;
     background-blend-mode: overlay;
-    height: 20vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'helmet';
+    font-size: 3em;
 }
 
 .headerTwo{
