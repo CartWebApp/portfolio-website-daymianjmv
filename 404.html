@@ -9,78 +9,78 @@
     <style>
         @import url('/fonts/font.css');
         body {
-            font-family: 'windows';
+            font-family: 'forza';
             padding: 50px;
-            background-color: #000000;
+            background: linear-gradient(135deg, #000000, #434343);
             color: white;
-            padding: 20em;
-            word-spacing: 0.5em; 
-            /* Add responsive padding */
-            padding: 5em 1em;
-            letter-spacing: 0.2em;
-            font-size: 700;
+            overflow: hidden;
+            animation: backgroundShift 10s infinite alternate;
         }
 
-        ::selection{
+        @keyframes backgroundShift {
+            0% { background: linear-gradient(135deg, #000000, #434343); }
+            100% { background: linear-gradient(135deg, #434343, #000000); }
+        }
+
+        ::selection {
             color: black;
             background-color: white;
-        }
-
-        .header::selection{
-            background-color: #000000;
-            color: antiquewhite;
         }
 
         .header-container {
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .header {
             font-size: 30px;
-            background-color: antiquewhite;
+            background: linear-gradient(90deg, antiquewhite, #ffcccb);
             color: #000000;
             text-align: center;
             display: inline-block;
             padding: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: pulse 3s infinite;
         }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
         h2 {
             font-size: 20px;
             font-weight: 300;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        a{
+        a {
             color: white;
+            text-decoration: none;
+            position: relative;
         }
 
-        h2 a:hover{
+        a:hover {
             background-color: white;
             color: black;
+            transition: all 0.3s ease-in-out;
         }
 
-        .key{
-            text-align: center;
-        }
-
-        .blinking-underline {
-            display: inline-block;
-            width: 10px;
-            height: 1em;
-            background-color: white;
-            animation: blink 1s infinite;
-        }
-
-        .text{
+        .text {
             margin-left: 18em;
             margin-left: 0;
+            animation: slideIn 1.5s ease-in-out;
         }
 
-        @keyframes blink {
-            0%, 50% {
-                opacity: 1;
-            }
-            50.01%, 100% {
-                opacity: 0;
-            }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1); }
         }
 
         @media (max-width: 768px) {
@@ -120,18 +120,72 @@
         <h2 class="header">d4ym1an.exe</h2>
     </div>
     <div class="text">
-    <h2>An error has occurred. To continue:</h2><br>
-    <h2><a href="index.html">Click Here</a> to return</h2>
-    <h2>Error: 0E : 016F : BFF9B3D4</h2>
-</div>
-    <h2 class="key">Press any key to get continue<span class="blinking-underline"></span></h2>
+        <h2>An error has occurred. To continue:</h2><br>
+        <h2><a id="bouncingLink" href="index.html">Click Here</a> to return</h2>
+        <h2>Error: 0E : 016F : BFF9B3D4</h2>
+    </div>
+    <canvas id="backgroundCanvas"></canvas>
 </body>
 <script>
-    document.addEventListener('keydown', function() {
-        window.location.href = 'index.html';
-    });
-    document.addEventListener('touchstart', function() {
-        window.location.href = 'index.html';
-    });
+    // Remove "press any key to continue" feature
+    // Add bouncing effect for the "Click Here to return" link
+    const link = document.getElementById('bouncingLink');
+    let x = 100, y = 100;
+    let dx = 2, dy = 2;
+
+    function moveLink() {
+        const linkRect = link.getBoundingClientRect();
+        const containerWidth = window.innerWidth;
+        const containerHeight = window.innerHeight;
+
+        if (x + linkRect.width >= containerWidth || x <= 0) dx *= -1;
+        if (y + linkRect.height >= containerHeight || y <= 0) dy *= -1;
+
+        x += dx;
+        y += dy;
+
+        link.style.position = 'absolute';
+        link.style.left = `${x}px`;
+        link.style.top = `${y}px`;
+
+        requestAnimationFrame(moveLink);
+    }
+
+    moveLink();
+
+    // Animated background with canvas
+    const canvas = document.getElementById('backgroundCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    for (let i = 0; i < 100; i++) {
+        particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 3 + 1,
+            dx: Math.random() * 2 - 1,
+            dy: Math.random() * 2 - 1
+        });
+    }
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            p.x += p.dx;
+            p.y += p.dy;
+
+            if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+        });
+        requestAnimationFrame(drawParticles);
+    }
+
+    drawParticles();
 </script>
 </html>

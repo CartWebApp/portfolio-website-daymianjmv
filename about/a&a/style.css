@@ -137,7 +137,7 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    background: linear-gradient(to bottom, #000000, #666666); /* Removed !important */
+    background: linear-gradient(to bottom, #000000, #666666);
     color: white;
 }
 

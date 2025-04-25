@@ -7,7 +7,27 @@
     <title> daymian // hobbies</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+<div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+    <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+    </div>
+</div>
 <body style="cursor: none;">
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
@@ -19,33 +39,77 @@
     </div>
     <button id="openSidebar" class="open-btn pointer-hover">☰</button>
 
+    <div class="head">
+        <h1 class="headText">Hobbies</h1>
+        <p class="headText">A few of my favorite things</p>
+        <a href="#bg" class="subgreetings pointer-hover two" style="cursor: none;">&#8595;</a>
+    </div>
+    <div class="bg" id="bg">
     <div class="hobbyOne hobbyOverall">
-        <h1>Gaming</h1>
-        <p>Some of my favorite games are mix of casual, yet, competive creativity-fueled adventures in
-            Minecraft, Roblox, and first person shooter (FPS) game of Kirka.io.
-            Each of these games feeds a different part of my brain—Minecraft scratches the builder/designer
-            itch, Roblox fuels endless experimentation, and Kirka is where the competitive spirit really kicks in.</p>
-        <br>
-        <p>These games aren’t just hobbies—they’ve shaped how I think about design, interactivity, and even teamwork.
-            Whether I’m strategizing in a fast-paced FPS match, building a redstone contraption that definitely won’t
-            explode (probably), or exploring the endless creativity of player-made worlds, I’m always learning,
-            iterating, and having a little too much fun while I’m at it.</p>
+        <div class="oneText">
+            <h1>Gaming</h1>
+            <p>Some of my favorite games are mix of casual, yet, competive creativity-fueled adventures in
+                Minecraft, Roblox, and first person shooter (FPS) game of Kirka.io.
+                Each of these games feeds a different part of my brain—Minecraft scratches the builder/designer
+                itch, Roblox fuels endless experimentation, and Kirka is where the competitive spirit really kicks in.
+            </p>
+            <br>
+            <p>These games aren’t just hobbies—they’ve shaped how I think about design, interactivity, and even
+                teamwork.
+                Whether I’m strategizing in a fast-paced FPS match, building a redstone contraption that definitely
+                won’t
+                explode (probably), or exploring the endless creativity of player-made worlds, I’m always learning,
+                iterating, and having a little too much fun while I’m at it.</p>
+        </div>
+        <div class="oneImg">
+            <img class="hobbyImg" src="/imgs/PLACEHOLDER.png" alt="Gaming Image">
+        </div>
     </div>
     <div class="hobbyTwo hobbyOverall">
-        <h1>Coding</h1>
-        <p>I like to code websites for fun. Yes, for fun. While some people unwind with a good book or a Netflix binge, I
-            relax by wrangling CSS and chasing down the one div that refuses to behave. I’ve built websites just for the
-            joy of it, whether it’s for friends, community projects, or the occasional “hey, wouldn’t it be cool if…”
-            idea that spirals into a full-blown site at 2 a.m. </p>
+        <div class="twoText">
+            <h1>Coding</h1>
+            <p>I like to code websites for fun. Yes, for fun. While some people unwind with a good book or a Netflix
+                binge,
+                I
+                relax by wrangling CSS and chasing down the one div that refuses to behave. I’ve built websites just for
+                the
+                joy of it, whether it’s for friends, community projects, or the occasional “hey, wouldn’t it be cool
+                if…”
+                idea that spirals into a full-blown site at 2 a.m. </p>
             <br>
             <p>From clean landing pages to quirky community hubs, I’ve put together a variety of sites—usually for free,
-            because sometimes the best payment is the reaction of someone seeing their idea live on the web (and maybe a
-            few memes shared in the process).</p>
+                because sometimes the best payment is the reaction of someone seeing their idea live on the web (and
+                maybe a
+                few memes shared in the process).</p>
             <p>Here are a few of my websites that I have made</p>
             <ul>
-                <li><a href="https://daymian-flow.netlify.app/">daymian-flow.netlify.app</a></li>
-                <li><a href></a></li>
+                <li><a class="pointer-hover" href="https://daymian-flow.netlify.app/">daymian-flow.netlify.app</a></li>
+                <li><a class="pointer-hover" href="https://dsftd.daymian.xyz">dsftd.daymian.xyz</a></li>
+                <li><a class="pointer-hover" href="https://kirka-css.daymian.xyz">kirka-css.daymian.xyz</a></li>
             </ul>
+        </div>
+        <div class="twoImg">
+            <img class="hobbyImg" src="/imgs/PLACEHOLDER.png" alt="Coding Image">
+        </div>
+    </div>
+    <div class="hobbyOne hobbyOverall">
+        <div class="OneText">
+            <h1>Music</h1>
+            <p>In my freetime where I get to lay in my bed and rot, I like to turn on some tunes, and let the melodies
+                take
+                me away. Music is my escape, a way to unwind and recharge my creativity.</p>
+            <br>
+            <p>Whether it's the latest hits or my Ol' Relaibles, music fuels my creativity and keeps me inspired. I
+                often
+                find
+                myself exploring different genres, from indie to rap, and each one brings a unique vibe that
+                influences my work. I personaly belive that everyone should experience the listening, and joy of music,
+                even
+                if its not what is "the norm"</p>
+        </div>
+        <div class="oneImg">
+            <img class="hobbyImg" src="/imgs/PLACEHOLDER.png" alt="Music Image">
+        </div>
     </div>
 
 
@@ -77,9 +141,10 @@
                     class="social-icon" src="/imgs/icons/linkedin.svg"></a>
         </div>
     </div>
-
+</div>
     <script src="/scripts/cursor.js"></script>
     <script src="/scripts/sidebar.js"></script>
+    <script src="/scripts/orbs.js"></script>
 </body>
 
 </html>
