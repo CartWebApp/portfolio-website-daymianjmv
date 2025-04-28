@@ -16,8 +16,8 @@
 
 @font-face {
     font-family: 'junegull';
-    src: url('junegull-webfont.woff2') format('woff2'),
-         url('junegull-webfont.woff') format('woff');
+    src: url('/fonts/junegull-webfont.woff2') format('woff2'),
+         url('/fonts/junegull-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -28,4 +28,11 @@
     src: url('windows_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Timetwist-Italic';
+    src: url('/fonts/Timetwist-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
