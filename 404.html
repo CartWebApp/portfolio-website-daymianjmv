@@ -8,124 +8,87 @@
     <title>404 Not Found</title>
 
     <style>
-        @import url('/fonts/stylesheet.css');
-
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial';
-            background-color: #000000;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0000AA;
             color: #FFFFFF;
             overflow: hidden;
         }
 
-        .fof {
-            font-family: 'Timetwist-Italic';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -70%);
-            z-index: 1;
-            color: rgb(0, 0, 0);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.5), -1px -1px #000000;
-            font-size: 20em;
-        }
-
-        .header {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            font-size: 15em;
-        }
-
-        .header-container {
+        .error-container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
-            width: 100%;
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+            background-color: #000000;
+            border: 2px solid #FFFFFF;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
-        .fof,
-        .header {
-            margin: 0;
+        .error-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .error-message {
+            font-size: 1em;
+            line-height: 1.5;
         }
 
         .button {
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 3;
+            display: block;
+            margin: 20px auto 0;
             background-color: #000000;
             color: #FFFFFF;
-            border: none;
-            padding: 20px 40px;
-            font-size: 2em;
+            border: 2px solid #FFFFFF;
+            padding: 10px 20px;
+            font-size: 1em;
             cursor: pointer;
-            font-family: 'Times New Roman';
-            border: #FFFFFF 2px solid;
-            text-decoration: underline;
+            text-align: center;
+            text-decoration: none;
+            width: fit-content;
         }
 
-        .clock {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #FFFFFF;
-            font-family: 'Times New Roman';
-            font-size: 1.5em;
-            z-index: 4;
-        }
-
-        @media (max-width: 450px) {
-            .fof {
-                font-size: 10em;
-                transform: translate(-50%, -60%);
-            }
-
-            .header {
-                font-size: 5em;
-                top: 40%;
-            }
-
-            .button {
-                font-size: 1.5em;
-                padding: 15px 30px;
-                top: 75%;
-            }
-
-            .clock {
-                font-size: 1em;
-            }
+        .button:hover {
+            background-color: #FFFFFF;
+            color: #000000;
         }
     </style>
 </head>
 
 <body>
-    <div class="clock" id="clock"></div>
-    <div class="header-container">
-        <h1 class="fof">404</h1>
-        <h2 class="header">d4ym1an.exe</h2>
+    <div class="error-container">
+        <div class="error-title">A fatal exception 0E has occurred at 0028:C0011E36 in VXD VMM(01) + 00010E36.</div>
+        <div class="error-message">
+            The current application will be terminated.<br><br>
+            * olssv, pt khftphu.<br>
+            * Press CTRL+ALT+BACKSPACE again to restart your computer. You will lose any unsaved information in all applications.<br><br>
+            Press any key to continue<span id="ellipsis">...</span>
+        </div>
+        <a class="button" href="/" onclick="return confirm('Are you sure you want to restart?')">Restart</a>
     </div>
-    <button class="button" onclick="window.location.href='/'">Go Home</button>
-    <canvas id="backgroundCanvas"></canvas>
     <script>
-        function updateClock() {
-            const clockElement = document.getElementById('clock');
-            const now = new Date();
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-            const year = now.getFullYear();
-            const date = `${day} - ${month} - ${year}`; // Format: DD - MM - YYYY
-            const time = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false }); // Exclude seconds
-            clockElement.textContent = `${date} ${time}`;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
+        const ellipsisElement = document.getElementById('ellipsis');
+        let dots = 0;
+
+        setInterval(() => {
+            dots = (dots + 1) % 4; // Cycle through 0, 1, 2, 3
+            ellipsisElement.textContent = '.'.repeat(dots);
+        }, 500); // Update every 500ms
+
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey && event.altKey && event.code === 'Backspace') {
+                window.location.href = '/'; // Redirect to index
+            } else {
+                location.reload(); // Reload the page
+            }
+        });
     </script>
 </body>
 
