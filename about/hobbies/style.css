@@ -551,6 +551,10 @@ button {
     filter: blur(5px);
 }
 
+li a:hover{
+    color: #daffd6;
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);

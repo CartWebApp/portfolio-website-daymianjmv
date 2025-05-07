@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn pointer-hover">×</button>
+        <a href="/index.html" class="sidebar-link pointer-hover">Home</a>
+        <a href="/about/index.html" class="sidebar-link pointer-hover">About Me</a>
+        <a href="/projects/index.html" class=" sidebar-link pointer-hover">Projects</a>
+        <a href="index.html" class="here sidebar-link pointer-hover">Contact <br> <span>you're already
+            here!</span></a>
+    </div>
+    <button id="openSidebar" class="open-btn pointer-hover">☰</button>
+
+    <div class="header">
+        <h1>Contact Me!</h1>
+        <h2>Feel free to reach out through the form below or via my social links!</h2>
+    </div>
+    <div class="contact">
+        <div class="contactRow">
+            <h3 class="light-bg-hover">Send Me a Message</h3>
+            <form action="https://formspree.io/f/mnndvpwk" method="POST" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit" class="pointer-hover">Send</button>
+            </form>
+        </div>
+        <div class="contactRow socials">
+            <h3 class="light-bg-hover">Find Me Online</h3>
+            <a class="pointer-hover" href="https://www.daymian.xyz" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/globe.svg"></a>
+            <a class="pointer-hover" href="https://github.com/daymianjmv" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github.svg"></a>
+            <a class="pointer-hover" href="https://github.com/d4ym1an" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github2.svg"></a>
+            <a class="pointer-hover" href="https://www.upwork.com/freelancers/~01bce3362aa859dc2d" target="_blank"><img
+                    class="social-icon" src="/imgs/icons/upwork.svg"></a>
+            <a class="pointer-hover" href="https://www.linkedin.com/in/daymian/" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/linkedin.svg"></a>
+        </div>
+    </div>
+
+    <script src="/scripts/cursor.js"></script>
+    <script src="/scripts/sidebar.js"></script>
+    </body>
+    </html>

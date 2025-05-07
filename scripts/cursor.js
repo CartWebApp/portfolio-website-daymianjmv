@@ -26,4 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
             cursor.style.borderColor = "rgba(255, 255, 255, 0.8)";
         });
     });
+
+    // Ensure cursor stays on top of the image popup
+    const popup = document.getElementById("imagePopup");
+    if (popup) {
+        popup.addEventListener("mouseenter", () => {
+            cursor.style.zIndex = "10001";
+        });
+        popup.addEventListener("mouseleave", () => {
+            cursor.style.zIndex = "9999";
+        });
+    }
 });
