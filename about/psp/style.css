@@ -1,4 +1,5 @@
 @import url(/fonts/stylesheet.css);
+@import url(/transitions.css);
 
 @keyframes scrollBackground {
     0% {
@@ -367,4 +368,68 @@ header{
 
 .career p{
     font-size: xx-large;
+}
+
+/* Mobile styles (max-width: 450px) */
+@media (max-width: 450px) {
+    header {
+        height: 20vh;
+        font-size: 30px;
+    }
+
+    .text {
+        flex-direction: column;
+        margin: 2em;
+    }
+
+    .mainSection, .career {
+        width: 100%;
+        margin: 0;
+        font-size: large;
+    }
+
+    .career h2 {
+        font-size: 30px;
+    }
+
+    .career p {
+        font-size: medium;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Tablet styles (max-width: 800px) */
+@media (max-width: 800px) {
+    header {
+        height: 25vh;
+        font-size: 40px;
+    }
+
+    .text {
+        flex-direction: column;
+        margin: 5em;
+    }
+
+    .mainSection, .career {
+        width: 90%;
+        margin: 0 auto;
+        font-size: x-large;
+    }
+
+    .career h2 {
+        font-size: 40px;
+    }
+
+    .career p {
+        font-size: large;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
 }

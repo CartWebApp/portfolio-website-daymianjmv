@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daymian . flow site</title>
+    <link rel="stylesheet" href="/projects/sitestyles.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn pointer-hover">×</button>
+        <a href="/index.html" class="sidebar-link pointer-hover">Home</a>
+        <a href="/about/index.html" class="sidebar-link pointer-hover">About Me</a>
+        <a href="/projects/index.html" class=" sidebar-link pointer-hover">Projects</a>
+        <a href="index.html" class="sidebar-link pointer-hover">Contact</a>
+    </div>
+    <button id="openSidebar" class="open-btn pointer-hover">☰</button>
+
+    <section class="iflow">
+        <h1>flow</h1>
+        <h3>This is the official website for the #1 competitive Kirka.io clan, flow. Showcasing our achievements,
+            members, and dedication to excellence in the game. It serves as a hub for showing off their wins, achievements, members,
+            and the love for the competitive scene.</h3>
+        <p>Click the image to explore our journey and accomplishments</p>
+    </section>
+
+    <section class="assets">
+        <div class="imgs">
+            <img src="/imgs/sites/flowHome.png" alt="Flow Home" class="carousel-img">
+            <img src="/imgs/sites/flowPage.png" alt="Flow Page" class="carousel-img">
+        </div>
+        <div class="video">
+            <video controls autoplay muted loop>
+                <source src="/videos/driftArena.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Modal for Image Carousel -->
+    <div id="carouselModal" class="carousel-modal">
+        <span class="close-carousel">&times;</span>
+        <img class="carousel-content" id="carouselImage">
+        <div class="carousel-controls">
+            <button id="prevImage" class="carousel-btn">❮</button>
+            <button id="nextImage" class="carousel-btn">❯</button>
+        </div>
+    </div>
+
+    <section class="features fflow">
+        <h2>What is flow?</h2>
+        <ul>
+            <li>Flow is the #1 competitive clan for the popular io game Kirka.io.</li>
+            <li>A group of skilled players dedicated to dominating the competitive scene.</li>
+            <li>Known for their teamwork, strategy, and unmatched performance.</li>
+            <li>Focused on fostering a strong community of top-tier players.</li>
+        </ul>
+    </section>
+
+    <a class="button flow pointer-hover" href="https://daymian-flow.netlify.app" target="_blank">Visit
+        flow</a>
+    <p style="text-align: center; font-size: xx-large;">See The Others</p>
+    <a class="bottomLink bld pointer-hover" href="/projects/drift/index.html">Drift</a>
+    <a class="bottomLink blc pointer-hover" href="/projects/css/index.html">CSSArena</a>
+
+    <div class="footer">
+        <div class="footerRow">
+            <h3 class="light-bg-hover">Contact</h3>
+            <p>Email: business@daymian.xyz</p>
+        </div>
+        <div class="footerRow">
+            <a href="/projects/index.html" style="color: #daffd6;">
+                <h3 class="light-bg-hover">Portfolio</h3>
+            </a>
+            <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#resume"
+                    target="_blank">Resume</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#projects"
+                    target="_blank">Projects</a></p>
+        </div>
+        <div class="footerRow">
+            <a style="color: #daffd6;" href="/about/index.html" class="pointer-hover">
+                <h3 class="light-bg-hover">About Me</h3>
+            </a>
+            <p class="portfolioLink"><a class="pointer-hover" href="#top">Awards & Achievements</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/about/hobbies/index.html">Hobbies</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/about/psp/index.html">Post Secondary Plan</a></p>
+        </div>
+        <div class="footerRow socials">
+            <a class="pointer-hover" href="https://www.daymian.xyz" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/globe.svg"></a>
+            <a class="pointer-hover" href="https://github.com/daymianjmv" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github.svg"></a>
+            <a class="pointer-hover" href="https://github.com/d4ym1an" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github2.svg"></a>
+            <a class="pointer-hover" href="https://www.upwork.com/freelancers/~01bce3362aa859dc2d" target="_blank"><img
+                    class="social-icon" src="/imgs/icons/upwork.svg"></a>
+            <a class="pointer-hover" href="https://www.linkedin.com/in/daymian/" target="_blank"><img
+                    class="social-icon" src="/imgs/icons/linkedin.svg"></a>
+        </div>
+    </div>
+    <script src="/scripts/cursor.js"></script>
+    <script src="/scripts/sidebar.js"></script>
+    <script src="/scripts/carousel.js"></script>
+    <script src="scripts/transition.js" defer></script>
+</body>
+
+</html>

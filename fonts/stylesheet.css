@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'helmet';
-    src: url('helmet-lwzv-webfont.woff2') format('woff2'),
-         url('helmet-lwzv-webfont.woff') format('woff');
+    src: url('/fonts/helmet-lwzv-webfont.woff2') format('woff2'),
+         url('/fonts/helmet-lwzv-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -24,15 +24,16 @@
 }
 
 @font-face {
-    font-family: 'windows';
-    src: url('windows_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Timetwist-Italic';
     src: url('/fonts/Timetwist-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'windows';
+    src: url('/fonts/windows_regular-webfont.woff2') format('woff2'),
+         url('/fonts/windows_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

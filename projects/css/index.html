@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daymian . css site</title>
+    <link rel="stylesheet" href="/projects/sitestyles.css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn pointer-hover">×</button>
+        <a href="/index.html" class="sidebar-link pointer-hover">Home</a>
+        <a href="/about/index.html" class="sidebar-link pointer-hover">About Me</a>
+        <a href="/projects/index.html" class=" sidebar-link pointer-hover">Projects</a>
+        <a href="index.html" class="sidebar-link pointer-hover">Contact</a>
+    </div>
+    <button id="openSidebar" class="open-btn pointer-hover">☰</button>
+    <!-- Modal for Image Carousel -->
+    <div id="carouselModal" class="carousel-modal">
+        <span class="close-carousel">&times;</span>
+        <img class="carousel-content" id="carouselImage">
+        <div class="carousel-controls">
+            <button id="prevImage" class="carousel-btn">❮</button>
+            <button id="nextImage" class="carousel-btn">❯</button>
+        </div>
+    </div>
+    <section class="icss">
+        <h1>CSSArena</h1>
+        <h3>CSSArena is a website I created to provide a collection of free, customizable CSS templates designed to enhance
+            the user experience by personalizing game HUDs and UI interfaces. Whether you're a developer looking to
+            streamline your design process or a gamer wanting to add a unique touch to your interface, CSSArena offers a
+            variety of styles to suit your needs.</h3>
+    </section>
+
+    <section class="assets">
+        <div class="imgs">
+            <img src="/imgs/sites/cssHome.png" alt="CSSArena Home" class="carousel-img">
+            <img src="/imgs/sites/cssPage.png" alt="CSSArena Page" class="carousel-img">
+        </div>
+        <div class="video">
+            <video controls autoplay muted loop>
+                <source src="/videos/cssArena.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="features fcss">
+        <h2>Features of CSSArena</h2>
+        <ul>
+            <li>Free and customizable CSS templates.</li>
+            <li>Designed for game HUDs and UI interfaces.</li>
+            <li>Streamlined design process for developers.</li>
+            <li>Unique styles for gamers.</li>
+        </ul>
+    </section>
+
+    <a class="button css pointer-hover" href="https://melodious-lamington-f2d51f.netlify.app" target="_blank">Visit CSSArena</a>
+    <p style="text-align: center; font-size: xx-large;">See The Others</p>
+    <a class="bottomLink blf pointer-hover" href="/projects/flow/index.html">flow</a>
+    <a class="bottomLink bld pointer-hover" href="/projects/drift/index.html">Drift</a>
+    <div class="footer">
+        <div class="footerRow">
+            <h3 class="light-bg-hover">Contact</h3>
+            <p>Email: business@daymian.xyz</p>
+        </div>
+        <div class="footerRow">
+            <a href="/projects/index.html" style="color: #daffd6;">
+                <h3 class="light-bg-hover">Portfolio</h3>
+            </a>
+            <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#resume"
+                    target="_blank">Resume</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#projects"
+                    target="_blank">Projects</a></p>
+        </div>
+        <div class="footerRow">
+            <a style="color: #daffd6;" href="/about/index.html" class="pointer-hover">
+                <h3 class="light-bg-hover">About Me</h3>
+            </a>
+            <p class="portfolioLink"><a class="pointer-hover" href="#top">Awards & Achievements</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/about/hobbies/index.html">Hobbies</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/about/psp/index.html">Post Secondary Plan</a></p>
+        </div>
+        <div class="footerRow socials">
+            <a class="pointer-hover" href="https://www.daymian.xyz" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/globe.svg"></a>
+            <a class="pointer-hover" href="https://github.com/daymianjmv" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github.svg"></a>
+            <a class="pointer-hover" href="https://github.com/d4ym1an" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github2.svg"></a>
+            <a class="pointer-hover" href="https://www.upwork.com/freelancers/~01bce3362aa859dc2d" target="_blank"><img
+                    class="social-icon" src="/imgs/icons/upwork.svg"></a>
+            <a class="pointer-hover" href="https://www.linkedin.com/in/daymian/" target="_blank"><img
+                    class="social-icon" src="/imgs/icons/linkedin.svg"></a>
+        </div>
+    </div>
+    <script src="/scripts/cursor.js"></script>
+    <script src="/scripts/sidebar.js"></script>
+    <script src="/scripts/carousel.js"></script>
+    <script src="scripts/transition.js" defer></script>
+</body>
+
+</html>

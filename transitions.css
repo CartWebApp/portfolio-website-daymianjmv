@@ -1,0 +1,21 @@
+/* Initial state for slide-in */
+/*
+body {
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+*/
+
+/* Slide-in effect */
+/*
+body.slide-in {
+    transform: translateX(0);
+}
+*/
+
+/* Slide-out effect */
+/*
+body.slide-out {
+    transform: translateX(-100%);
+}
+*/

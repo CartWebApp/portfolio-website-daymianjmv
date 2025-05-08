@@ -1,4 +1,5 @@
 @import url(/fonts/stylesheet.css);
+@import url(/transitions.css);
 
 @keyframes moveInCircle {
     0% {
@@ -724,4 +725,86 @@ span{
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Tablet (800px) */
+@media (max-width: 800px) {
+    .miniIntro {
+        font-size: 2rem;
+        margin-left: 3%;
+    }
+
+    .greetings {
+        font-size: 6rem;
+    }
+
+    .subgreetings {
+        font-size: 3rem;
+    }
+
+    .button {
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem;
+        width: 40%;
+    }
+
+    .siteVersion {
+        width: 90%;
+    }
+
+    .footerRow h3 {
+        font-size: 1.2rem;
+    }
+
+    .footerRow p, .footerRow a {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Mobile (450px) */
+@media (max-width: 450px) {
+    .miniIntro {
+        font-size: 1.5rem;
+        margin-left: 2%;
+    }
+
+    .greetings {
+        font-size: 4rem;
+    }
+
+    .subgreetings {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
+        width: 80%;
+    }
+
+    .siteVersion {
+        width: 100%;
+    }
+
+    .footerRow h3 {
+        font-size: 1rem;
+    }
+
+    .footerRow p, .footerRow a {
+        font-size: 0.8rem;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sidebar a {
+        font-size: 2rem;
+    }
 }

@@ -1,4 +1,5 @@
 @import url(/fonts/stylesheet.css);
+@import url(/transitions.css);
 
 @keyframes scrollBackground {
     0% {
@@ -353,4 +354,70 @@ span {
     font-size: 1.5rem;
     font-weight: 300;
     margin-top: 0;
+}
+
+/* Mobile styles (max-width: 450px) */
+@media (max-width: 450px) {
+    .contact {
+        margin: 2em;
+    }
+
+    .contactRow {
+        margin-top: 2em;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header h2 {
+        font-size: 1rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Tablet styles (max-width: 800px) */
+@media (max-width: 800px) {
+    .contact {
+        margin: 5em;
+    }
+
+    .contactRow {
+        margin-top: 3em;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
 }
