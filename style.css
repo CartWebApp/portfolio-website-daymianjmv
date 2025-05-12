@@ -354,6 +354,10 @@ button {
 .miniStuff {
     border: white solid 2px;
     border-radius: 2em;
+    margin: 10em;
+    p{
+        font-size: x-large;
+    }
 }
 
 .greetings {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>daymian . portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/imgs/favicon.png">
 </head>
 
 <body>
@@ -19,12 +20,12 @@
     </div>
     <button id="openSidebar" class="open-btn pointer-hover">☰</button>
 
-    <div class="header">
-        <h1>My Projects!</h1>
-        <h2>Here you can find a collection of some of my work and my portfolio!</h2>
-    </div>
-    <main>
-        <div class="resume" id="resume">
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>My Projects!</h1>
+            <h2>Here you can find a collection of some of my work and my portfolio!</h2>
+        </div>
+        <section class="resume" id="resume">
             <img src="/imgs/Daymian_J_Madrigal_Vasquez_Resume.png">
             <div class="downloads">
                 <a href="/imgs/Daymian_J_Madrigal_Vasquez_Resume.png" download="Daymian_J_Madrigal_Vasquez_Resume.png"
@@ -32,8 +33,8 @@
                 <a href="/imgs/Daymian_J_Madrigal_Vasquez_Resume.pdf" download="Daymian_J_Madrigal_Vasquez_Resume.pdf"
                     class="button pointer-hover light-bg-hover">Download PDF</a>
             </div>
-        </div>
-        <div class="projects" id="projects">
+        </section>
+        <section class="projects" id="projects">
             <h1>Images of some of my favorite works!</h1>
             <h3>(you can click on them to learn more about this website 👀)</h3>
             <div class="group">
@@ -58,7 +59,7 @@
                 <img src="/imgs/sites/cssHome.png">
                 <img src="/imgs/sites/cssPage.png">
                 <div class="buttonGroup">
-                    <a class="button css pointer-hover light-bg-hover" href="css/index.html" >Learn More</a>
+                    <a class="button css pointer-hover light-bg-hover" href="css/index.html">Learn More</a>
                     <a class="button css pointer-hover light-bg-hover" href="https://melodious-lamington-f2d51f.netlify.app"
                         target="_blank">Visit</a>
                 </div>
@@ -72,37 +73,38 @@
                 <img src="/imgs/renders/larthumbnail.png">
                 <img src="/imgs/renders/fabin.png">
             </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <div class="footerRow">
+            <h3 class="light-bg-hover">Contact</h3>
+            <p>Email: business@daymian.xyz</p>
         </div>
-        <div class="footer">
-            <div class="footerRow">
-                <h3 class="light-bg-hover">Contact</h3>
-                <p>Email: business@daymian.xyz</p>
-            </div>
-            <div class="footerRow">
-                <a href="/projects/index.html" style="color: #daffd6;"><h3 class="light-bg-hover">Portfolio</h3></a>
-                <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#resume" target="_blank">Resume</a></p>
-                <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#projects" target="_blank">Projects</a></p>
-            </div>
-            <div class="footerRow">
-                <a style="color: #daffd6;" href="/about/index.html" class="pointer-hover"><h3 class="light-bg-hover">About Me</h3></a>
-                <p class="portfolioLink"><a class="pointer-hover" href="#top">Awards & Achievements</a></p>
-                <p class="portfolioLink"><a class="pointer-hover" href="/about/hobbies/index.html">Hobbies</a></p>
-                <p class="portfolioLink"><a class="pointer-hover" href="/about/psp/index.html">Post Secondary Plan</a></p>
-            </div>
-            <div class="footerRow socials">
-                <a class="pointer-hover" href="https://www.daymian.xyz" target="_blank"><img class="social-icon"
-                        src="/imgs/icons/globe.svg"></a>
-                <a class="pointer-hover" href="https://github.com/daymianjmv" target="_blank"><img class="social-icon"
-                        src="/imgs/icons/github.svg"></a>
-                <a class="pointer-hover" href="https://github.com/d4ym1an" target="_blank"><img class="social-icon"
-                        src="/imgs/icons/github2.svg"></a>
-                <a class="pointer-hover" href="https://www.upwork.com/freelancers/~01bce3362aa859dc2d" target="_blank"><img
-                        class="social-icon" src="/imgs/icons/upwork.svg"></a>
-                <a class="pointer-hover" href="https://www.linkedin.com/in/daymian/" target="_blank"><img class="social-icon"
-                        src="/imgs/icons/linkedin.svg"></a>
-            </div>
+        <div class="footerRow">
+            <a href="/projects/index.html" style="color: #daffd6;"><h3 class="light-bg-hover">Portfolio</h3></a>
+            <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#resume" target="_blank">Resume</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/projects/index.html#projects" target="_blank">Projects</a></p>
         </div>
-    </main>
+        <div class="footerRow">
+            <a style="color: #daffd6;" href="/about/index.html" class="pointer-hover"><h3 class="light-bg-hover">About Me</h3></a>
+            <p class="portfolioLink"><a class="pointer-hover" href="#top">Awards & Achievements</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/about/hobbies/index.html">Hobbies</a></p>
+            <p class="portfolioLink"><a class="pointer-hover" href="/about/psp/index.html">Post Secondary Plan</a></p>
+        </div>
+        <div class="footerRow socials">
+            <a class="pointer-hover" href="https://www.daymian.xyz" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/globe.svg"></a>
+            <a class="pointer-hover" href="https://github.com/daymianjmv" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github.svg"></a>
+            <a class="pointer-hover" href="https://github.com/d4ym1an" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/github2.svg"></a>
+            <a class="pointer-hover" href="https://www.upwork.com/freelancers/~01bce3362aa859dc2d" target="_blank"><img
+                    class="social-icon" src="/imgs/icons/upwork.svg"></a>
+            <a class="pointer-hover" href="https://www.linkedin.com/in/daymian/" target="_blank"><img class="social-icon"
+                    src="/imgs/icons/linkedin.svg"></a>
+        </div>
+    </div>
 
     <div class="image-popup" id="imagePopup">
         <button class="close-btn" id="closePopup">×</button>

@@ -1,32 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/imgs/favicon.png">
     <title>daymian . updates</title>
     <style>
+        @font-face {
+            font-family: 'windows';
+            src: url('/fonts/windows_regular-webfont.woff2') format('woff2'),
+                url('/fonts/windows_regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             background-color: white;
             color: black;
             transition: background-color 0.3s, color 0.3s;
             padding: 4em;
         }
+
         .dark-mode {
             background-color: black;
             color: white;
         }
+
+        h1,
+        h2 {
+            font-family: 'windows', sans-serif;
+        }
+
+        p {
+            font-family: Arial;
+        }
     </style>
 </head>
+
 <body>
+    <div id="clock" style="font-family: 'windows', sans-serif; font-size: 1.5em; margin-bottom: 1em;"></div>
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
     <h1>This is where i'll put all of past site updates</h1>
     <h2>This is also very bare bones on purpose</h2>
-    <a href="/index.html">Go Back Home</a>
+    <button onclick="window.location.href='/index.html'">Go Back Home</button>
     <button id="colorToggle">Toggle Colors</button>
+    <p style="color: white;">gurt: yo</p>
     <div class="update">
         <h1>Version 1.0</h1>
-        <p>I have finished all site pages. This took me from Mar 28, 2025 to May 10, 2025.</p>
+        <p>I have finished all site pages. This took me from Mar 28, 2025 to May 13, 2025.</p>
     </div>
-<hr>
+    <hr>
     <script>
         const toggleButton = document.getElementById('colorToggle');
         toggleButton.addEventListener('click', () => {
@@ -34,4 +69,5 @@
         });
     </script>
 </body>
+
 </html>

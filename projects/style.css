@@ -335,11 +335,13 @@ span {
 
 /* web page */
 
-.resume{
+.resume {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
+    position: relative;
+    z-index: 5;
 }
 
 .resume img{
@@ -410,13 +412,18 @@ span {
     margin-top: 20px;
 }
 
-.header{
+.header {
     margin-top: 5em;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
-.projects{
+.projects {
     text-align: center;
+    margin-top: 2em;
+    position: relative;
+    z-index: 10;
 }
 
 .group {
@@ -656,9 +663,13 @@ span {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1366px) {
     body {
         font-size: 16px;
+    }
+
+    .header {
+        margin-top: 3em;
     }
 
     .header h1 {
@@ -669,10 +680,15 @@ span {
         font-size: 1.25rem;
     }
 
+    .projects {
+        margin-top: 1.5em;
+    }
+
     .resume {
         flex-direction: column;
         height: auto;
         padding: 2rem;
+        z-index: 5;
     }
 
     .resume img {
